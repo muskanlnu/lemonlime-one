@@ -1,0 +1,22 @@
+name: Resuable Bicep Deployment Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+       RESOURCE_GROUP:
+        description: 'Resource Group'
+        required: true
+
+  workflow_call:
+    secrets:
+      ENVIORNMENT:
+        required: true
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Deploy Bicep template
+        uses: muskanlnu/lemonlime-re-workflow/blob/main/.github/workflows/deploy-reusable.yml@main
+        with:
+          RESOURCE_GROUP: ${{inputs.RESOURCE_GROUP}}
+        
