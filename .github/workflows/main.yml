@@ -22,5 +22,6 @@ jobs:
     uses: muskanlnu/lemonlime-re-workflow/.github/workflows/deploy-reusable.yml@main
     with :
         RESOURCE_GROUP: ${{inputs.RESOURCE_GROUP}}
+    secrets: inherit
     
         
