@@ -3,9 +3,10 @@ name: Resuable Bicep Deployment Workflow
 on:
   workflow_dispatch:
     inputs:
-       RESOURCE_GROUP:
+      RESOURCE_GROUP:
         description: 'Resource Group'
         required: true
+
 
   # workflow_call:
   #   secrets:
