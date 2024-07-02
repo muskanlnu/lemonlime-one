@@ -7,10 +7,10 @@ on:
         description: 'Resource Group'
         required: true
 
-  workflow_call:
-    secrets:
-      ENVIORNMENT:
-        required: true
+  # workflow_call:
+  #   secrets:
+  #     ENVIORNMENT:
+  #       required: true
 jobs:
   build:
     runs-on: [ubuntu-latest]
